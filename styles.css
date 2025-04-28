@@ -75,5 +75,6 @@ p {
 
 .discord {
   filter: brightness(0) invert(1);
-  width: 60px;
+  width: 70px;
+  height: 40px;
 }
