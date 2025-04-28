@@ -41,6 +41,8 @@ body {
     padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .video-container iframe {
@@ -51,7 +53,6 @@ body {
     height: 100%;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .social-links {
@@ -67,11 +68,12 @@ body {
 .social-icon {
     font-size: 2rem;
     color: #fff;
-    transition: transform 0.3s;
+    transition: transform 0.3s, color 0.3s;
 }
 
 .social-icon:hover {
     transform: scale(1.2);
+    color: #ff7e5f;
 }
 
 @keyframes fadeIn {
