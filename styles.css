@@ -1,64 +1,77 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    font-family: 'Arial', sans-serif;
+    color: #fff;
     overflow: hidden;
 }
 
-.container {
+.bio-container {
+    max-width: 800px;
+    width: 90%;
     text-align: center;
     animation: fadeIn 1s ease-in-out;
 }
 
-.title {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    animation: slideIn 1s ease-in-out;
+.profile {
+    margin-bottom: 40px;
 }
 
-.description {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
+.animated-text {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 0.5s forwards;
 }
 
-.contact-form {
+.video-section {
+    margin-bottom: 40px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icons {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    justify-content: center;
+    gap: 20px;
 }
 
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.contact-form button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #ff7e5f;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #ff7e5f;
+.social-icon {
+    font-size: 2rem;
     color: #fff;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
 }
 
 @keyframes fadeIn {
@@ -72,9 +85,15 @@ body {
 
 @keyframes slideIn {
     from {
-        transform: translateY(-50px);
+        opacity: 0;
+        transform: translateY(-20px);
     }
     to {
+        opacity: 1;
         transform: translateY(0);
     }
+}
+
+.spinner {
+    display: none; /* Hide spinner for now */
 }
