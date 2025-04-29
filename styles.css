@@ -63,16 +63,13 @@ p {
   width: 50px;
   height: 50px;
   transition: transform 0.3s ease;
+  will-change: box-shadow; /* Optimize animation rendering */
 }
 
-.youtube:hover {
+.logo:hover {
   transform: scale(1.2);
-  animation: youtube-glow 1s ease-in-out infinite;
-}
-
-.discord:hover {
-  transform: scale(1.2);
-  animation: discord-glow 1s ease-in-out infinite;
+  animation: glow 2s ease-in-out infinite;
+  z-index: 10; /* Ensure glow is on top */
 }
 
 .youtube {
@@ -86,26 +83,14 @@ p {
   transform: translateY(5px); /* Retained for alignment with YouTube logo */
 }
 
-@keyframes youtube-glow {
+@keyframes glow {
   0% {
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   }
   50% {
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 1.0);
   }
   100% {
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
-  }
-}
-
-@keyframes discord-glow {
-  0% {
-    box-shadow: 0 0 10px rgba(114, 137, 218, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(114, 137, 218, 0.8);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(114, 137, 218, 0.4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   }
 }
