@@ -57,7 +57,6 @@ p {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  position: relative; /* Reference for absolute positioning */
 }
 
 .logo {
@@ -78,11 +77,5 @@ p {
   filter: brightness(0) invert(1);
   width: 55px;
   height: 40px;
-  margin-top: -12px; /* Retained from previous request */
-}
-
-.dragging {
-  position: absolute;
-  cursor: grabbing;
-  z-index: 1000; /* Ensure logo is on top during dragging */
+  transform: translateY(5px); /* Added to level with YouTube logo */
 }
