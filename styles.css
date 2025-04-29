@@ -1,4 +1,3 @@
-// styles.tsx
 import styled from 'styled-components';
 
 export const Body = styled.div`
@@ -80,5 +79,5 @@ export const Discord = styled(Logo)`
   filter: brightness(0) invert(1);
   width: 55px;
   height: 40px;
-  margin-top: 2px; /* Adjusted from 4px to 2px to move logo higher */
+  margin-top: -8px; /* Adjusted to move logo up significantly */
 `;
