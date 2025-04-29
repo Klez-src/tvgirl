@@ -57,7 +57,7 @@ p {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  position: relative; /* Added to serve as coordinate reference */
+  position: relative; /* Reference for absolute positioning */
 }
 
 .logo {
@@ -82,6 +82,7 @@ p {
 }
 
 .dragging {
-  position: absolute; /* Applied during dragging */
+  position: absolute;
   cursor: grabbing;
+  z-index: 1000; /* Ensure logo is on top during dragging */
 }
