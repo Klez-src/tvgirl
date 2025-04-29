@@ -79,5 +79,5 @@ export const Discord = styled(Logo)`
   filter: brightness(0) invert(1);
   width: 55px;
   height: 40px;
-  margin-top: -8px; /* Adjusted to move logo up significantly */
+  margin-top: -12px; /* Adjusted from -8px to -12px to move logo up further */
 `;
