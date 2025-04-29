@@ -1,3 +1,6 @@
+console.log('Script loaded'); // Debug: Confirm script is running
+
+const discordLink = document.getElementById('discord-link');
 const discordLogo = document.getElementById('discord-logo');
 const logoContainer = document.querySelector('.logo-container');
 const coordinatesDiv = document.getElementById('coordinates');
@@ -8,18 +11,19 @@ let currentY = 0;
 
 /**
  * Starts dragging the Discord logo.
- * @param e MouseEvent
+ * @param {MouseEvent} e
  */
 function startDragging(e) {
+    console.log('Dragging started'); // Debug: Confirm mousedown
     isDragging = true;
     discordLogo.classList.add('dragging');
     updatePosition(e);
-    e.preventDefault(); // Prevent default link behavior
+    e.preventDefault(); // Prevent link navigation
 }
 
 /**
  * Updates the logo's position and coordinates during dragging.
- * @param e MouseEvent
+ * @param {MouseEvent} e
  */
 function updatePosition(e) {
     if (!isDragging) return;
@@ -39,6 +43,7 @@ function updatePosition(e) {
  */
 function stopDragging() {
     if (isDragging) {
+        console.log('Dragging stopped'); // Debug: Confirm mouseup
         isDragging = false;
         discordLogo.classList.remove('dragging');
         console.log(`Final Coordinates: (x: ${Math.round(currentX)}, y: ${Math.round(currentY)})`);
@@ -46,13 +51,14 @@ function stopDragging() {
 }
 
 // Event listeners
-discordLogo.addEventListener('mousedown', startDragging);
+discordLink.addEventListener('mousedown', startDragging);
 document.addEventListener('mousemove', updatePosition);
 document.addEventListener('mouseup', stopDragging);
 
 // Prevent default link navigation during dragging
-discordLogo.addEventListener('click', (e) => {
+discordLink.addEventListener('click', (e) => {
     if (currentX !== 0 || currentY !== 0) {
+        console.log('Link click prevented due to dragging'); // Debug: Confirm click prevention
         e.preventDefault(); // Prevent navigation if logo was moved
     }
 });
