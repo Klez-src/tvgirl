@@ -1,4 +1,7 @@
-body {
+// styles.tsx
+import styled from 'styled-components';
+
+export const Body = styled.div`
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -9,73 +12,73 @@ body {
   align-items: center;
   height: 100vh;
   overflow: hidden;
-}
+`;
 
-.container {
+export const Container = styled.div`
   text-align: center;
-}
+`;
 
-h1 {
+export const H1 = styled.h1`
   font-size: 3rem;
   margin-bottom: 0.3rem;
-}
+`;
 
-p {
+export const P = styled.p`
   font-size: 1.2rem;
   margin-bottom: 1rem;
   font-style: italic;
-}
+`;
 
-.video-container {
+export const VideoContainer = styled.div`
   width: 450px;
   height: 300px;
   background-color: #2a2a2a;
   border-radius: 20px;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
-}
 
-.video-container:hover {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-}
+  &:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  }
+`;
 
-#yt-video {
+export const YtVideo = styled.iframe`
   width: 100%;
   height: 100%;
-}
+`;
 
-.links {
+export const Links = styled.div`
   margin-top: 1rem;
-}
+`;
 
-.links h2 {
+export const LinksH2 = styled.h2`
   font-size: 1.5rem;
   margin-bottom: 1rem;
-}
+`;
 
-.logo-container {
+export const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 2rem;
-}
+`;
 
-.logo {
+export const Logo = styled.img`
   width: 50px;
   height: 50px;
   transition: transform 0.3s ease;
-}
 
-.logo:hover {
-  transform: scale(1.2);
-}
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
 
-.youtube {
+export const Youtube = styled(Logo)`
   filter: brightness(0) invert(1);
-}
+`;
 
-.discord {
+export const Discord = styled(Logo)`
   filter: brightness(0) invert(1);
   width: 55px;
   height: 40px;
-  margin-top: 4px; /* Adjusted from 8px to 4px to move logo up more */
-}
+  margin-top: 2px; /* Adjusted from 4px to 2px to move logo higher */
+`;
