@@ -1,6 +1,4 @@
-import styled from 'styled-components';
-
-export const Body = styled.div`
+body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -11,73 +9,79 @@ export const Body = styled.div`
   align-items: center;
   height: 100vh;
   overflow: hidden;
-`;
+}
 
-export const Container = styled.div`
+.container {
   text-align: center;
-`;
+}
 
-export const H1 = styled.h1`
+h1 {
   font-size: 3rem;
   margin-bottom: 0.3rem;
-`;
+}
 
-export const P = styled.p`
+p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   font-style: italic;
-`;
+}
 
-export const VideoContainer = styled.div`
+.video-container {
   width: 450px;
   height: 300px;
   background-color: #2a2a2a;
   border-radius: 20px;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
+}
 
-  &:hover {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-  }
-`;
+.video-container:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
 
-export const YtVideo = styled.iframe`
+#yt-video {
   width: 100%;
   height: 100%;
-`;
+}
 
-export const Links = styled.div`
+.links {
   margin-top: 1rem;
-`;
+}
 
-export const LinksH2 = styled.h2`
+.links h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-`;
+}
 
-export const LogoContainer = styled.div`
+.logo-container {
   display: flex;
   justify-content: center;
   gap: 2rem;
-`;
+  position: relative; /* Added to serve as coordinate reference */
+}
 
-export const Logo = styled.img`
+.logo {
   width: 50px;
   height: 50px;
   transition: transform 0.3s ease;
+}
 
-  &:hover {
-    transform: scale(1.2);
-  }
-`;
+.logo:hover {
+  transform: scale(1.2);
+}
 
-export const Youtube = styled(Logo)`
+.youtube {
   filter: brightness(0) invert(1);
-`;
+}
 
-export const Discord = styled(Logo)`
+.discord {
   filter: brightness(0) invert(1);
   width: 55px;
   height: 40px;
-  margin-top: -12px; /* Adjusted from -8px to -12px to move logo up further */
-`;
+  margin-top: -12px; /* Retained from previous request */
+}
+
+.dragging {
+  position: absolute; /* Applied during dragging */
+  cursor: grabbing;
+}
