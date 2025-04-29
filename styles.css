@@ -77,5 +77,5 @@ p {
   filter: brightness(0) invert(1);
   width: 55px;
   height: 40px;
-  margin-top: 8px; /* Adjusted from 12px to 8px to move logo up */
+  margin-top: 4px; /* Adjusted from 8px to 4px to move logo up more */
 }
